@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
@@ -30,6 +31,36 @@ public abstract class Game
     {
         return gameName;
     }
+    public void register() {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter username and password");
+
+        String username = input.nextLine();
+
+        String password = input.nextLine();
+        boolean isValid = false;
+        while (isValid = false) {
+            if (password.length() > 8) {
+                System.out.println("Please enter more then 8 characters");
+                password = input.nextLine();
+            }
+
+            for (int i = 0; i < password.length(); i++) {
+
+                if (!(Character.isLetterOrDigit(password.charAt(i)))) {
+                    System.out.println("Please enter a special character like !@#");
+                } else {
+                    isValid = true;
+                }
+
+            }
+
+        }
+
+    }
+    
     
      /**
      * @return the players of this game

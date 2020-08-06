@@ -63,5 +63,4 @@ public class GroupOfCards
         Card c = cards.get(i);
         return c;
     }
-
 }//end class

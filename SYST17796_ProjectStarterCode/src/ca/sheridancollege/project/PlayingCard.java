@@ -15,7 +15,28 @@ public class PlayingCard extends Card {
         HEARTS,
         SPADES,
         CLUBS,
-        DIAMONDS
+        DIAMONDS;
+        public String getSuit(int i){
+            String s;
+            switch(i){
+                case 1:
+                    s = "HEARTS";
+                    break;
+                case 2: 
+                    s = "SPADES";
+                    break;
+                case 3:
+                    s = "CLUBS";
+                    break;
+                case 4:
+                    s = "DIAMONDS";
+                    break;
+                default: 
+                    s = "ERROR";
+                    break;
+            }
+            return s;
+        }
     }
     String suit;
     PlayingCard(){}
@@ -26,4 +47,5 @@ public class PlayingCard extends Card {
     @Override public String toString(){
         return suit + value;
     }
+
 }

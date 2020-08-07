@@ -10,9 +10,10 @@ package ca.sheridancollege.project;
  */
 import java.util.Random;
 public class Deck extends GroupOfCards{
-    Deck(){
+    public Deck(){
         super(52);
         for (int x = 0; x<13; x++){//faces
+            
             for(int y = 0; y<4; y++){
                 PlayingCard c = new PlayingCard();
                 c.value = x;//set card value
@@ -33,4 +34,5 @@ public class Deck extends GroupOfCards{
         return pickedCard;//Send picked card to hand
 
     }
+
 }

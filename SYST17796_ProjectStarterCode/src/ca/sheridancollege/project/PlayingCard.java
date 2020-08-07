@@ -10,7 +10,9 @@ package ca.sheridancollege.project;
  * @author Matthew
  */
 public class PlayingCard extends Card {
-    int value;
+
+   int value;
+
     enum Suits {
         HEARTS,
         SPADES,
@@ -18,36 +20,42 @@ public class PlayingCard extends Card {
         DIAMONDS;
 
     }
-    String suit;
-    PlayingCard(){}
-    PlayingCard(String giveSuit, int giveValue){
+     String suit;
+
+    PlayingCard() {
+    }
+
+    PlayingCard(String giveSuit, int giveValue) {
         suit = giveSuit;
         value = giveValue;
     }
-    @Override public String toString(){
+
+    @Override
+    public String toString() {
         return suit + value;
     }
-    public String getSuit(int i)
-    {
-            String s;
-            switch(i){
-                case 1:
-                    s = "HEARTS";
-                    break;
-                case 2: 
-                    s = "SPADES";
-                    break;
-                case 3:
-                    s = "CLUBS";
-                    break;
-                case 4:
-                    s = "DIAMONDS";
-                    break;
-                default: 
-                    s = "ERROR";
-                    break;
-            }
-            return s;
-        }
 
-}
+    public String getSuit(int i) {
+        String s;
+        switch (i) {
+            case 1:
+                s = "HEARTS";
+                break;
+            case 2:
+                s = "SPADES";
+                break;
+            case 3:
+                s = "CLUBS";
+                break;
+            case 4:
+                s = "DIAMONDS";
+                break;
+            default:
+                s = "ERROR";
+                break;
+        }
+        return s;
+    }
+    
+    
+} 

@@ -10,8 +10,20 @@ package ca.sheridancollege.project;
  * @author Matthew
  */
 public class Hand extends GroupOfCards {
-    public Hand(){
+    private int numberOfCards;
+            private Deck deck = new Deck();
+    public Hand(int givenSize){
         super(2);
+        givenSize = 2;
     }
 
+    
+    public int checkTotal(){
+        int total = 0;
+        for (int i = 0; i < numberOfCards; i++){
+            
+        }
+    
+    return total;
+    }
 }

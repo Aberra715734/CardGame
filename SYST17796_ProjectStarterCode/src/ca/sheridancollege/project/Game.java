@@ -90,6 +90,9 @@ public abstract class Game
      */
     public abstract void declareWinner();
 
-   
+   public int getPlayerSize()
+   {
+       return this.players.size();
+   }
     
 }//end class

@@ -53,5 +53,14 @@ public class GroupOfCards
     public void setSize(int givenSize) {
         size = givenSize;
     }
-    
+    public void addCard(Card c){
+        cards.add(c);
+    }
+    public void removeCard(int i){
+        cards.remove(i);
+    }
+    public Card getCard(int i){
+        Card c = cards.get(i);
+        return c;
+    }
 }//end class

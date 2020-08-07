@@ -36,9 +36,9 @@ public abstract class Game
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter username and password");
-
+        System.out.printf("\nUsername: ");
         String username = input.nextLine();
-
+        System.out.printf("\nPassword:");
         String password = input.nextLine();
         boolean isValid = false;
         while (isValid = false) {

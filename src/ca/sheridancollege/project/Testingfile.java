@@ -1,5 +1,7 @@
 package ca.sheridancollege.project;
 
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,31 +12,24 @@ package ca.sheridancollege.project;
  *
  * @author User
  */
-public  abstract class Testingfile {
+public   class Testingfile {
     
     /**
      *
      */
-    public abstract void  apple();
+    
     
     
 }
 
-class Nothing extends Testingfile{
-
-    public  void apple(){
-System.out.println("coffee");
-    }
-} 
-    class Nothing1 extends Testingfile{
-        public void apple(){
-        System.out.println("madmamd");
-        }
-    }
-        class Try {
+           class Try {
         public static void main (String[] s){
-        Nothing app = new Nothing();
-        app.apple();
+            
+            Scanner input = new Scanner(System.in);
+
+           BlackJackPlayer player = new BlackJackPlayer("Game");
+           
+        player.register();
         }
                 
                 

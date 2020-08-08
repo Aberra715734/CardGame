@@ -8,6 +8,7 @@ package ca.sheridancollege.project;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 /**
  * The class that models your game. You should create a more specific child of
@@ -17,12 +18,14 @@ import java.util.Collection;
  */
 public abstract class Game {
 
-    private final String gameName;//the title of the game
-    private ArrayList<Player> players;// the players of the game
+    public  String gameName;//the title of the game
+    public  ArrayList<Player> players;// the players of the game
+   
+
 
     public Game(String givenName) {
         gameName = givenName;
-        players = new ArrayList();
+         players = new ArrayList();
     }
 
 
@@ -40,12 +43,16 @@ public abstract class Game {
         return players;
     }
 
+ 
+  
     /**
      * @param players the players of this game
      */
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
     }
+    
+    
 
     /**
      * Play the game. This might be one method or many method calls depending on
@@ -54,7 +61,7 @@ public abstract class Game {
     public abstract void play();
 
     /**
-     * When the game is over, use this method to declare and display a winning
+     * When the game is over, use this method to declare and display a winningye
      * player.
      */
     

@@ -20,10 +20,23 @@ import java.util.Scanner;
       public void play(){
       
       }
+         public void exitGame(){
+             Scanner input = new Scanner(System.in);
+             String add  =input.nextLine();
+             
+             if(add.equalsIgnoreCase("exit")){
+        System.exit(0);
+             }
+         }
+         public void gameOption(){
          
+             
          
+         }
          @Override
          public void declareWinner(){
          
          }
+
+    
      }

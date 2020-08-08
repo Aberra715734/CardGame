@@ -11,8 +11,7 @@ import java.util.Scanner;
  *
  * @author jasleen
  */
-public class BlackjackPlayer extends Player{
-
+public class BlackjackPlayer extends Player {
 
     public BlackjackPlayer(String name) {
         super(name);
@@ -20,46 +19,49 @@ public class BlackjackPlayer extends Player{
 
     @Override
     public void play() {
-      
+
     }
-    
-<<<<<<< HEAD
+
     @Override
-    public boolean hitOrStay(){
-=======
-    public boolean hitOrStay(){
+    public boolean hitOrStay() {
         boolean hit = false;
->>>>>>> 12ce080191f0ca7d13a4f1b2b0fdf2aeb1b96439
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want to hit or stay?");
         String reply = input.next();
-        if (reply.equalsIgnoreCase("Hit")){
-<<<<<<< HEAD
+        if (reply.equalsIgnoreCase("Hit")) {
 //            super.getHand().addCard(deck.drawCard());
-              return true; 
-        }
-        else {
-//            super.getHand().checkTotal();
-             return false;
-=======
             hit = true;
-        }
-        else if (reply.equalsIgnoreCase("Stay")){
+        } else if (reply.equalsIgnoreCase("Stay")) {
+//            super.getHand().checkTotal();
             hit = false;
->>>>>>> 12ce080191f0ca7d13a4f1b2b0fdf2aeb1b96439
+        } else {
+            System.out.println("Not a valid choice, please choose hit or stay");
+            hit = false;
         }
         return hit;
     }
-        
-    public void checkBust() {
+
+    public boolean checkBust() {
+        boolean bust = false;
         if (super.getHand().checkTotal() > 21) {
-            System.out.println("Player has been busted, he is no longer in this round."); 
-        } 
-    }
-    
-    public void checkBlackjack(){
-        if (super.getHand().checkTotal() == 21){
-            System.out.println("Blackjack");
+//            System.out.println("Player has been busted, he is no longer in this round.");
+            bust = true;
         }
+        else {
+            bust = false;
+        }
+        return bust;
+    }
+
+    public boolean checkBlackjack() {
+        boolean blackjack = false;
+        if (super.getHand().checkTotal() == 21) {
+//            System.out.println("Blackjack");
+             blackjack = true;
+        }
+        else {
+            blackjack = false;
+        }
+        return blackjack;
     }
 }

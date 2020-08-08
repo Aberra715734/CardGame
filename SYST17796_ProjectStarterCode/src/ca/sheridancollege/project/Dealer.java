@@ -24,6 +24,7 @@ public class Dealer {
     
     public void dealerTurn(){
         if (hand.checkTotal() <= 16){
+            System.out.println("Dealer has to draw a card.");
             hand.addCard(deck.drawCard());
         }
         else if (hand.checkTotal() > 21){

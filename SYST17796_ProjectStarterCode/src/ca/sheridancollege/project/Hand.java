@@ -14,9 +14,10 @@ public class Hand extends GroupOfCards {
 
     public Hand(){
         super(0);
+        super.initialize();
     }
 
-    
+    //Check total of values of card for player and dealer.
     public int checkTotal(){
         int total = 0;
         for (int i = 0; i < super.getSize(); i++){

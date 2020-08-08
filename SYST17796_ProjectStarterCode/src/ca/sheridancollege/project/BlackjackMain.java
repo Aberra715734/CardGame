@@ -42,10 +42,11 @@ public class BlackjackMain {
                 + "\n"
                 + "\n* You cannot play on two aces after they are split."
                 + "\n"
-                + "\n* You can double on a hand resulting from a split, tripling or quadrupling you bet."
+                + "\n* You can double on a hand resulting from a split, tripling or quadrupling you bet.\n"
                  );
         
         BlackJack game = new BlackJack();
         game.register();
+        game.play();
     }
 }

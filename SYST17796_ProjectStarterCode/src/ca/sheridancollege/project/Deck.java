@@ -4,49 +4,65 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.project;
+
 /**
  * Represents a standard deck of 52 playing cards
+ *
  * @author Matthew
  */
 import java.util.Random;
-public class Deck extends GroupOfCards{
-    public Deck(){
+
+public class Deck extends GroupOfCards {
+
+    public Deck() {
         super(0);
-        super.initialize();//initialize array
+        //initialize array
+        super.initialize();
         buildDeck();
     }
-    public Card drawCard(){
-        
-        if(super.getSize() > 0)//If deck is not empty
-        {
+
+    //Draw card from deck.
+    public Card drawCard() {
+        //If deck is not empty
+        if (super.getSize() > 0) {
             return pickCard();
-        }
-        else//If deck is empty
+        } else//If deck is empty
         {
-            buildDeck();//add new cards
+            //add new cards
+            buildDeck();
             return pickCard();
         }
     }
-    public void buildDeck(){
-        for (int x = 0; x<13; x++){//faces
-            
-            for(int y = 0; y<4; y++){
+
+    //Used to build deck
+    public void buildDeck() {
+        for (int x = 0; x < 13; x++) {
+            //faces
+            for (int y = 0; y < 4; y++) {
                 PlayingCard newCard = new PlayingCard();
-                newCard.value = x;//set card value
-                newCard.suit = newCard.getSuit(y);//set card suit
+                //set card value
+                newCard.value = x;
+                //set card suit
+                newCard.suit = newCard.getSuit(y);
                 super.addCard(newCard);
-                super.setSize(super.getSize()+1);//adds 1 to the size of the deck
+                //adds 1 to the size of the deck
+                super.setSize(super.getSize() + 1);
             }
         }
     }
-    public Card pickCard(){//Selects a random card
-            Random r = new Random();//create random generator
-            int c = r.nextInt(super.getSize());//pick the index of the card to draw, maximum number is equal to size of card group
-            super.setSize(super.getSize()-1);//reduce the size of the card group by one
-            Card pickedCard = super.getCard(c);//copy drawn card as a picked card
-            super.removeCard(c);//remove copied card from deck
-            return pickedCard;
+
+    //Selects a random card
+    public Card pickCard() {
+        //create random generator
+        Random r = new Random();
+        //pick the index of the card to draw, maximum number is equal to size of card group
+        int c = r.nextInt(super.getSize());
+        //reduce the size of the card group by one
+        super.setSize(super.getSize() - 1);
+        //copy drawn card as a picked card
+        Card pickedCard = super.getCard(c);
+        //remove copied card from deck
+        super.removeCard(c);
+        return pickedCard;
     }
-
 }
-

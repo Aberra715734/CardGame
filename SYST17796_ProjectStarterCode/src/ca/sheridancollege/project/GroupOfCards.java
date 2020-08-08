@@ -9,34 +9,41 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * A concrete class that represents any grouping of cards for a Game.
- * HINT, you might want to subclass this more than once.
- * The group of cards has a maximum size attribute which is flexible for reuse.
+ * A concrete class that represents any grouping of cards for a Game. HINT, you
+ * might want to subclass this more than once. The group of cards has a maximum
+ * size attribute which is flexible for reuse.
+ *
  * @author Sivagama
  */
-public class GroupOfCards 
-{
-   
+public class GroupOfCards {
+
     //The group of cards, stored in an ArrayList
-    private ArrayList <Card> cards;
-    private int size;//the size of the grouping
-    
-    public GroupOfCards(int givenSize)
-    {
+    private ArrayList<Card> cards;
+    //the size of the grouping
+    private int size;
+
+    /**
+     * constructor that allows to set size of the deck.
+     *
+     * @param givenSize the size of deck.
+     */
+    public GroupOfCards(int givenSize) {
         size = givenSize;
     }
-    
+
     /**
      * A method that will get the group of cards as an ArrayList
+     *
      * @return the group of cards.
      */
-    public ArrayList<Card> showCards()
-    {
+    public ArrayList<Card> showCards() {
         return cards;
     }
-    
-    public void shuffle()
-    {
+
+    /**
+     * method which is used to shuffle the cards in a deck.
+     */
+    public void shuffle() {
         Collections.shuffle(cards);
     }
 
@@ -53,16 +60,36 @@ public class GroupOfCards
     public void setSize(int givenSize) {
         size = givenSize;
     }
-    public void initialize(){
+
+    /**
+     * Initialize the ArrayList of cards.
+     */
+    public void initialize() {
         cards = new ArrayList<Card>();
     }
-    public void addCard(Card c){
+
+    /**
+     *
+     * @param c
+     */
+    public void addCard(Card c) {
         cards.add(c);
     }
-    public void removeCard(int i){
+
+    /**
+     *
+     * @param i
+     */
+    public void removeCard(int i) {
         cards.remove(i);
     }
-    public Card getCard(int i){
+
+    /**
+     *
+     * @param i
+     * @return
+     */
+    public Card getCard(int i) {
         Card c = cards.get(i);
         return c;
     }

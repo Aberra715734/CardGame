@@ -11,8 +11,9 @@ package ca.sheridancollege.project;
  */
 public class PlayingCard extends Card {
 
-   int value;
+    int value;
 
+    //enum for Suits 
     enum Suits {
         HEARTS,
         SPADES,
@@ -20,16 +21,22 @@ public class PlayingCard extends Card {
         DIAMONDS;
 
     }
-     String suit;
+    String suit;
 
     PlayingCard() {
     }
 
+    /**
+     * Constructor that allows to set Suit and value of card
+     * @param giveSuit the suit in the deck
+     * @param giveValue the value of the suit
+     */
     PlayingCard(String giveSuit, int giveValue) {
         suit = giveSuit;
         value = giveValue;
     }
 
+    //return toString()
     @Override
     public String toString() {
         return suit + value;
@@ -56,6 +63,5 @@ public class PlayingCard extends Card {
         }
         return s;
     }
-    
-    
-} 
+
+}

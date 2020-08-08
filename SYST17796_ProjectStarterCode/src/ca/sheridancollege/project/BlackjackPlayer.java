@@ -24,20 +24,23 @@ public class BlackjackPlayer extends Player{
       
     }
     
-    public void hitOrStay(){
+    @Override
+    public boolean hitOrStay(){
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want to hit or stay?");
         String reply = input.next();
         if (reply.equalsIgnoreCase("Hit")){
-            super.getHand().addCard(deck.drawCard());
+//            super.getHand().addCard(deck.drawCard());
+              return true; 
         }
-        else if (reply.equalsIgnoreCase("Stay")){
-            super.getHand().checkTotal();
+        else {
+//            super.getHand().checkTotal();
+             return false;
         }
     }
         public void checkBust() {
         if (super.getHand().checkTotal() > 21) {
-            System.out.println("Player Bust");
+            System.out.println("Player has been busted, he is no longer in this round."); 
         } 
     }
     

@@ -13,7 +13,6 @@ import java.util.Scanner;
  */
 public class BlackjackPlayer extends Player{
 
-    private Deck deck;
 
     public BlackjackPlayer(String name) {
         super(name);
@@ -24,21 +23,35 @@ public class BlackjackPlayer extends Player{
       
     }
     
+<<<<<<< HEAD
     @Override
     public boolean hitOrStay(){
+=======
+    public boolean hitOrStay(){
+        boolean hit = false;
+>>>>>>> 12ce080191f0ca7d13a4f1b2b0fdf2aeb1b96439
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want to hit or stay?");
         String reply = input.next();
         if (reply.equalsIgnoreCase("Hit")){
+<<<<<<< HEAD
 //            super.getHand().addCard(deck.drawCard());
               return true; 
         }
         else {
 //            super.getHand().checkTotal();
              return false;
+=======
+            hit = true;
         }
+        else if (reply.equalsIgnoreCase("Stay")){
+            hit = false;
+>>>>>>> 12ce080191f0ca7d13a4f1b2b0fdf2aeb1b96439
+        }
+        return hit;
     }
-        public void checkBust() {
+        
+    public void checkBust() {
         if (super.getHand().checkTotal() > 21) {
             System.out.println("Player has been busted, he is no longer in this round."); 
         } 

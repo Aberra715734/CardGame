@@ -45,7 +45,7 @@ public class BlackjackMain {
                 + "\n* You can double on a hand resulting from a split, tripling or quadrupling you bet."
                  );
         
-        BlackjackGame game = new BlackjackGame();
+        BlackJack game = new BlackJack();
         game.register();
     }
 }

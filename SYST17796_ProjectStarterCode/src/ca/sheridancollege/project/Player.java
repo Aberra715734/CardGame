@@ -21,7 +21,7 @@ public abstract class Player
     {
         playerID= name;
     }
-    
+    public abstract boolean hitOrStay();
     /**
      * @return the playerID
      */

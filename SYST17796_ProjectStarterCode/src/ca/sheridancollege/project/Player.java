@@ -38,6 +38,9 @@ public abstract class Player
     {
         playerID = givenID;
     }
+    public Hand getHand(){
+        return playerHand;
+    }
 
     /**
      * The method to be instantiated when you subclass the Player class

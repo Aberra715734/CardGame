@@ -73,7 +73,6 @@ public abstract class Game
     {
         players.add(newplayer);
     }
-
     /**
      * @param players the players of this game
      */

@@ -17,6 +17,8 @@ public class Test {
     public static void main(String[] args) {
         BlackJack game = new BlackJack();
         game.play();
+        BlackjackPlayer player = new BlackjackPlayer("name");
+        game.addPlayer(player);
     }
     
 }

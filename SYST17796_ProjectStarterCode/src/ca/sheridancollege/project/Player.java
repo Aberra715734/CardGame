@@ -38,7 +38,10 @@ public abstract class Player
     {
         playerID = givenID;
     }
-    
+    public Hand getHand(){
+        return playerHand;
+    }
+
     /**
      * The method to be instantiated when you subclass the Player class
      * with your specific type of Player and filled in with logic to play your game.

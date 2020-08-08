@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class BlackjackPlayer extends Player{
 
     private Deck deck;
-    private Hand playerHand;
 
     public BlackjackPlayer(String name) {
         super(name);
@@ -30,20 +29,20 @@ public class BlackjackPlayer extends Player{
         System.out.println("Do you want to hit or stay?");
         String reply = input.next();
         if (reply.equalsIgnoreCase("Hit")){
-            deck.getCard(0);
+            super.getHand().addCard(deck.drawCard());
         }
         else if (reply.equalsIgnoreCase("Stay")){
-            playerHand.checkTotal();
+            super.getHand().checkTotal();
         }
     }
         public void checkBust() {
-        if (playerHand.checkTotal() > 21) {
+        if (super.getHand().checkTotal() > 21) {
             System.out.println("Player Bust");
         } 
     }
     
     public void checkBlackjack(){
-        if (playerHand.checkTotal() == 21){
+        if (super.getHand().checkTotal() == 21){
             System.out.println("Blackjack");
         }
     }

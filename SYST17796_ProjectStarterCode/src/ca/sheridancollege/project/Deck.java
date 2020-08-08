@@ -11,7 +11,8 @@ package ca.sheridancollege.project;
 import java.util.Random;
 public class Deck extends GroupOfCards{
     public Deck(){
-        super(52);
+        super(0);
+        super.initialize();//initialize array
         buildDeck();
     }
     public Card drawCard(){
@@ -22,7 +23,6 @@ public class Deck extends GroupOfCards{
         }
         else//If deck is empty
         {
-            super.setSize(52);//refil deck
             buildDeck();//add new cards
             return pickCard();
         }
@@ -34,7 +34,8 @@ public class Deck extends GroupOfCards{
                 PlayingCard newCard = new PlayingCard();
                 newCard.value = x;//set card value
                 newCard.suit = newCard.getSuit(y);//set card suit
-                super.addCard(newCard);    
+                super.addCard(newCard);
+                super.setSize(super.getSize()+1);//adds 1 to the size of the deck
             }
         }
     }

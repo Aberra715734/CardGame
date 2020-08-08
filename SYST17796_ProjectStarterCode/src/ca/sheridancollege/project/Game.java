@@ -21,7 +21,7 @@ public abstract class Game
     public Game(String givenName)
     {
         gameName = givenName;
-        players = new ArrayList();
+        players = new ArrayList<Player>();
     }
 
     /**

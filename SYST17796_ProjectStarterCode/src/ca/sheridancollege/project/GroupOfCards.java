@@ -53,6 +53,9 @@ public class GroupOfCards
     public void setSize(int givenSize) {
         size = givenSize;
     }
+    public void initialize(){
+        cards = new ArrayList<Card>();
+    }
     public void addCard(Card c){
         cards.add(c);
     }

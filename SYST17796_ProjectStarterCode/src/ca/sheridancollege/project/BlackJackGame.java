@@ -9,8 +9,8 @@ package ca.sheridancollege.project;
  *
  * @author Matthew
  */
-public class BlackJack extends Game{
-    public BlackJack(){
+public class BlackjackGame extends Game{
+    public BlackjackGame(){
         super("BlackJack");
     }
     Deck deck = new Deck();

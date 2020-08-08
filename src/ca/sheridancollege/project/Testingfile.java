@@ -26,12 +26,24 @@ public   class Testingfile {
         public static void main (String[] s){
             
             Scanner input = new Scanner(System.in);
+            System.out.println("Welcome to BlackJack");
 
-           BlackJackPlayer player = new BlackJackPlayer("Game");
-           
-        player.register();
-        }
+  boolean start = true;
+   BlackJackPlayer apit = new BlackJackPlayer("");
+        BlackJack f = new BlackJack();
+   apit.register();
+  do{
+       
+        
+        
+         apit.playerOption();
+       
+       
+      
+        
+  }while(start= true);
+       
                 
-                
+       }      
         }
     

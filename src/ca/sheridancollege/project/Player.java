@@ -16,9 +16,16 @@ import java.util.Scanner;
 public abstract class Player {
 
 
-
+     Scanner input = new Scanner(System.in);
     private String playerID; //the unique ID for this player
     private int score;
+
+    @Override
+    public String toString() {
+        return "Player{" + "input=" + input + ", playerID=" + playerID + ", score=" + score + '}';
+    }
+    
+
 
     /**
      * A constructor that allows you to set the player's unique ID
@@ -29,6 +36,12 @@ public abstract class Player {
         playerID = name;
     }
 
+    
+        
+         public void viewScore(){
+         
+         
+         }
     /**
      * @return the playerID
      */

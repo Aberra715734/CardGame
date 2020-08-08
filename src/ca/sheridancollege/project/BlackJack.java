@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
  class BlackJack extends Game  {
           public BlackJack(){
-        super("BlackJack");
+        super("GameName");
     }
     Deck deck = new Deck();
     
@@ -25,9 +25,20 @@ import java.util.Scanner;
              String add  =input.nextLine();
              
              if(add.equalsIgnoreCase("exit")){
-        System.exit(0);
-             }
+        System.exit(0);             }
          }
+         
+      public void addPlayer(Player newPlayer){
+ players.add(newPlayer);
+ }
+      
+            public void removePlayer(Player newPlayer){
+ players.remove(newPlayer);
+ }
+            
+            public void clearPlayer(Player clear){
+            players.clear();
+            }
          public void gameOption(){
          
              
@@ -37,6 +48,9 @@ import java.util.Scanner;
          public void declareWinner(){
          
          }
+
+     
+
 
     
      }

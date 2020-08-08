@@ -18,16 +18,25 @@ import java.util.Iterator;
  */
 public abstract class Game {
 
-    public  String gameName;//the title of the game
+    private  String gameName;//the title of the game
     public  ArrayList<Player> players;// the players of the game
-   
-
-
+ public Iterator<Player> iterator;
     public Game(String givenName) {
         gameName = givenName;
          players = new ArrayList();
     }
 
+public void addPlayer(Player newPlayer){
+ players.add(newPlayer);
+}
+
+public void removePlayer(Player newPlayer){
+ players.add(newPlayer);
+}
+
+public void clearPlayer(){
+ players.clear();
+}
 
     /**
      * @return the gameName
@@ -43,14 +52,21 @@ public abstract class Game {
         return players;
     }
 
- 
-  
+public void iteratePlayer(){
+iterator = players.iterator();
+iterator.next();
+}
+
+public void getPlayer(int n){
+System.out.print(players.get(n));}
     /**
      * @param players the players of this game
      */
     public void setPlayers(ArrayList<Player> players) {
         this.players = players;
     }
+   
+
     
     
 

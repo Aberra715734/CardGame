@@ -10,18 +10,17 @@ package ca.sheridancollege.project;
  * @author Matthew
  */
 public class Hand extends GroupOfCards {
-    private int numberOfCards;
-            private Deck deck = new Deck();
-    public Hand(int givenSize){
-        super(2);
-        givenSize = 2;
+
+
+    public Hand(){
+        super(0);
     }
 
     
     public int checkTotal(){
         int total = 0;
-        for (int i = 0; i < numberOfCards; i++){
-            
+        for (int i = 0; i < super.getSize(); i++){
+           super.getCard(i).toString();
         }
     
     return total;

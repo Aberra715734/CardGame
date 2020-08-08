@@ -31,10 +31,10 @@ public class Deck extends GroupOfCards{
         for (int x = 0; x<13; x++){//faces
             
             for(int y = 0; y<4; y++){
-                PlayingCard c = new PlayingCard();
-                c.value = x;//set card value
-                c.suit = c.getSuit(y);
-                super.addCard(c);    
+                PlayingCard newCard = new PlayingCard();
+                newCard.value = x;//set card value
+                newCard.suit = newCard.getSuit(y);//set card suit
+                super.addCard(newCard);    
             }
         }
     }

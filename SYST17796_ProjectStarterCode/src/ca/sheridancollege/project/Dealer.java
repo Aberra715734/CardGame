@@ -11,7 +11,7 @@ package ca.sheridancollege.project;
  */
 public class Dealer {
     
-    private Hand hand = new Hand(2);
+    private Hand hand = new Hand();
     private Deck deck;
     public boolean checkValue(){
        if (hand.checkTotal() == 21){

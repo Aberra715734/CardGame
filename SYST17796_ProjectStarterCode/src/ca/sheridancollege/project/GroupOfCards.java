@@ -56,12 +56,7 @@ public class GroupOfCards
     public void initialize(){
         cards = new ArrayList<Card>();
     }
-    public void addCard(Card c){
-        cards.add(c);
-    }
-    public void removeCard(int i){
-        cards.remove(i);
-    }
+    
     public Card getCard(int i){
         Card c = cards.get(i);
         return c;

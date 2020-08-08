@@ -34,7 +34,7 @@ public class Deck extends GroupOfCards{
                 PlayingCard newCard = new PlayingCard();
                 newCard.value = x;//set card value
                 newCard.suit = newCard.getSuit(y);//set card suit
-                super.addCard(newCard);
+                super.showCards().add(newCard);
                 super.setSize(super.getSize()+1);//adds 1 to the size of the deck
             }
         }
@@ -44,7 +44,7 @@ public class Deck extends GroupOfCards{
             int c = r.nextInt(super.getSize());//pick the index of the card to draw, maximum number is equal to size of card group
             super.setSize(super.getSize()-1);//reduce the size of the card group by one
             Card pickedCard = super.getCard(c);//copy drawn card as a picked card
-            super.removeCard(c);//remove copied card from deck
+            super.showCards().remove(c);//remove copied card from deck
             return pickedCard;
     }
 

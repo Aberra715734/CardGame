@@ -24,7 +24,7 @@ public class Dealer {
     
     public void dealerTurn(){
         if (hand.checkTotal() <= 16){
-            hand.addCard(deck.drawCard());
+            hand.showCards().add(deck.drawCard());
         }
         else if (hand.checkTotal() > 21){
             System.out.println("Dealer bust.");

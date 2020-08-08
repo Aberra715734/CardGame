@@ -46,6 +46,10 @@ public class BlackjackMain {
                  );
         
         BlackJack game = new BlackJack();
-        game.register();
+        BlackjackPlayer testPlayer = new BlackjackPlayer("tester");
+        game.addPlayer(testPlayer);
+        game.play();
+        
+        
     }
 }

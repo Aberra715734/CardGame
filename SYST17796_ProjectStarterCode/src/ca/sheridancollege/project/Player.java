@@ -22,6 +22,8 @@ public abstract class Player
         playerID= name;
     }
     public abstract boolean hitOrStay();
+    public abstract boolean checkBust();
+    public abstract boolean checkBlackjack();
     /**
      * @return the playerID
      */

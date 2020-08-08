@@ -36,16 +36,23 @@ public class BlackjackPlayer extends Player{
         }
         return hit;
     }
-        
-    public void checkBust() {
+    @Override     
+    public boolean checkBust() {
         if (super.getHand().checkTotal() > 21) {
             System.out.println("Player Bust");
+            return true;
         } 
+        else
+            return false;
     }
     
-    public void checkBlackjack(){
+    @Override
+    public boolean checkBlackjack(){
         if (super.getHand().checkTotal() == 21){
             System.out.println("Blackjack");
+            return true;
         }
+        else
+            return false;
     }
 }

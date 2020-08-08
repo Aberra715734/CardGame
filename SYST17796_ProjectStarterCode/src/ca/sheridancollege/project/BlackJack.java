@@ -16,8 +16,8 @@ public class BlackJack extends Game{
         {
             for(int j = 0; j < 2; j++)//preform the following twice
             {
-                PlayingCard c = new PlayingCard();
-                super.getPlayers().get(i).getHand();
+                Card c = deck.drawCard();
+                super.getPlayers().get(i).getHand().showCards().add(c);
             }
         }
 

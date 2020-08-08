@@ -49,7 +49,7 @@ public class BlackjackMain {
         BlackjackPlayer testPlayer = new BlackjackPlayer("tester");
         game.addPlayer(testPlayer);
         game.play();
-        
+        game.deck.drawCard();
         
     }
 }

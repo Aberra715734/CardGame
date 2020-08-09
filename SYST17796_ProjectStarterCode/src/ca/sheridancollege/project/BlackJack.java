@@ -29,17 +29,11 @@ public class BlackJack extends Game {
         {
             for(int i = 0; i < super.getPlayerSize(); i++)//Cycle through player turns
             {
-                while (super.getPlayers().get(i).checkBust() != true)//checks if player has busted out
+                while (super.getPlayers().get(i).checkBust() != true && getPlayers().get(i).hitOrStay() != false)//checks if player has busted out
                 {
-                    boolean hit = true;//create hit variable, set to true
-                    do 
-                    {
-                        hit = getPlayers().get(i).hitOrStay();//do hitOrStay command until hit is false
-                        if(hit = true){
-                            getPlayers().get(i).getHand().showCards().add(deck.drawCard());
-                        }
-                    }
-                    while(hit == true);//continue loop while hit is true
+                    Card c = deck.drawCard();
+                    getPlayers().get(i).getHand().showCards().add(c);
+                    System.out.println(c.toString());
                 }
             }
             dealerhits = dealer.hitOrStay();//evaluate while loop condition

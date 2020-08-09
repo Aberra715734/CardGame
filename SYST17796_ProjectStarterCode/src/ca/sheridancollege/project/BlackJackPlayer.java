@@ -30,9 +30,11 @@ public class BlackJackPlayer extends Player {
         String reply = input.next();
         if (reply.equalsIgnoreCase("Hit")) {
 //            super.getHand().addCard(deck.drawCard());
+            System.out.println("Player " + getPlayerID() + " Hits!");
             hit = true;
         } else if (reply.equalsIgnoreCase("Stay")) {
 //            super.getHand().checkTotal();
+            System.out.println("Player " + getPlayerID() + " Stays!");
             hit = false;
         } else {
             System.out.println("Not a valid choice, please choose hit or stay");

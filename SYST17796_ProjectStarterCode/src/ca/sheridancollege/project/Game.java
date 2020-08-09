@@ -52,7 +52,7 @@ public abstract class Game {
         String password = input.nextLine();
         boolean isValid = false;
         while (isValid = false) {
-            if (password.length() > 8) {
+            if (password.length() < 8) {
                 System.out.println("Please enter more then 8 characters");
                 password = input.nextLine();
             }

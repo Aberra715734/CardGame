@@ -46,11 +46,15 @@ public class BlackJackMain {
                  );
         
         BlackJack game = new BlackJack();
+<<<<<<< HEAD
         BlackJackPlayer testPlayer = new BlackJackPlayer("tester");
         game.register();
         game.addPlayer(testPlayer);
+=======
+        BlackjackPlayer newPlayer = new BlackjackPlayer("player");
+        game.addPlayer(newPlayer);
+>>>>>>> 91ddc337e10d8e1574faa52ed1474ba7d9c192a2
         game.play();
-        game.deck.drawCard();
         
     }
 }

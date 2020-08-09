@@ -37,7 +37,7 @@ public class BlackjackPlayer extends Player {
             System.out.println("Player " + getPlayerID() + " Stays!");
             hit = false;
         } else {
-            System.out.println("Not a valid choice, please choose hit or stay");
+            System.out.println("Not a valid choice, please type hit or stay");
             hit = false;
         }
         return hit;

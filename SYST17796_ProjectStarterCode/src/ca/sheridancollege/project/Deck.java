@@ -36,7 +36,7 @@ public class Deck extends GroupOfCards {
 
     //Used to build deck
     public void buildDeck() {
-        for (int x = 0; x < 13; x++) {
+        for (int x = 1; x < 13; x++) {
             //faces
             for (int y = 1; y < 5; y++) {
                 PlayingCard newCard = new PlayingCard();

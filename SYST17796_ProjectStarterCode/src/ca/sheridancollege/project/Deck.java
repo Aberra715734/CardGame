@@ -38,7 +38,7 @@ public class Deck extends GroupOfCards {
     public void buildDeck() {
         for (int x = 0; x < 13; x++) {
             //faces
-            for (int y = 0; y < 4; y++) {
+            for (int y = 1; y < 5; y++) {
                 PlayingCard newCard = new PlayingCard();
                 newCard.value = x;//set card value
                 newCard.suit = newCard.getSuit(y);//set card suit

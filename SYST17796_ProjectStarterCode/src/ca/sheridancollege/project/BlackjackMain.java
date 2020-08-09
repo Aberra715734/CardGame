@@ -10,8 +10,8 @@ package ca.sheridancollege.project;
  * @author jasleen
  */
 public class BlackJackMain {
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         System.out.println("Welcome to Blackjack"
                 + "\n"
                 + "\nPLease read the rules before playing: "
@@ -43,23 +43,15 @@ public class BlackJackMain {
                 + "\n* You cannot play on two aces after they are split."
                 + "\n"
                 + "\n* You can double on a hand resulting from a split, tripling or quadrupling you bet.\n"
-                 );
-        
+        );
+
         BlackJack game = new BlackJack();
-<<<<<<< HEAD
         BlackJackPlayer testPlayer = new BlackJackPlayer("tester");
         game.register();
         game.addPlayer(testPlayer);
-=======
-        BlackjackPlayer newPlayer = new BlackjackPlayer("player");
-        game.addPlayer(newPlayer);
-<<<<<<< HEAD
->>>>>>> 91ddc337e10d8e1574faa52ed1474ba7d9c192a2
-=======
-        
-        newPlayer.playerOption();
->>>>>>> cardgame/master
+
+        testPlayer.playerOption();
         game.play();
-        
+
     }
 }

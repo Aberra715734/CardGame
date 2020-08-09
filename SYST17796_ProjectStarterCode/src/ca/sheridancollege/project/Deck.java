@@ -40,19 +40,29 @@ public class Deck extends GroupOfCards {
             //faces
             for (int y = 1; y < 5; y++) {
                 PlayingCard newCard = new PlayingCard();
-                newCard.value = x;//set card value
-                newCard.suit = newCard.getSuit(y);//set card suit
+                //set card value
+                newCard.value = x;
+                //set card suit
+                newCard.suit = newCard.getSuit(y);
                 super.showCards().add(newCard);
-                super.setSize(super.getSize()+1);//adds 1 to the size of the deck
+                //adds 1 to the size of the deck
+                super.setSize(super.getSize() + 1);
             }
         }
     }
-    public Card pickCard(){//Selects a random card
-            Random r = new Random();//create random generator
-            int c = r.nextInt(super.getSize());//pick the index of the card to draw, maximum number is equal to size of card group
-            super.setSize(super.getSize()-1);//reduce the size of the card group by one
-            Card pickedCard = super.getCard(c);//copy drawn card as a picked card
-            super.showCards().remove(c);//remove copied card from deck
-            return pickedCard;
+
+    //Selects a random card
+    public Card pickCard() {
+        //create random generator
+        Random r = new Random();
+        //pick the index of the card to draw, maximum number is equal to size of card group
+        int c = r.nextInt(super.getSize());
+        //reduce the size of the card group by one
+        super.setSize(super.getSize() - 1);
+        //copy drawn card as a picked card
+        Card pickedCard = super.getCard(c);
+        //remove copied card from deck
+        super.showCards().remove(c);
+        return pickedCard;
     }
 }

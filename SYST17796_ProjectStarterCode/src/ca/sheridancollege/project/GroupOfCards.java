@@ -60,17 +60,22 @@ public class GroupOfCards {
     public void setSize(int givenSize) {
         size = givenSize;
     }
-    public void addOne(){
+
+    public void addOne() {
         size = size + 1;
     }
+
     /**
      * Initialize the ArrayList of cards.
      */
     public void initialize() {
         cards = new ArrayList<Card>();
     }
-    
-    public Card getCard(int i){
+
+    /**
+     * @return return the card
+     */
+    public Card getCard(int i) {
         Card c = cards.get(i);
         return c;
     }

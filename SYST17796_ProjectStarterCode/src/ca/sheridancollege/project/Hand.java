@@ -10,22 +10,25 @@ package ca.sheridancollege.project;
  * @author Matthew
  */
 public class Hand extends GroupOfCards {
-    public Hand(){
+
+    public Hand() {
         super(0);
         super.initialize();
     }
 
-    public int checkTotal(){//updates hand total value
+    //updates hand total value
+    public int checkTotal() {
         int totalValue = 0;
-        for(int i = 0; i < getSize(); i++)
-        {
+        for (int i = 0; i < getSize(); i++) {
             totalValue += showCards().get(i).getValue();
         }
         return totalValue;
     }
-    @Override public String toString(){
+
+    @Override
+    public String toString() {
         String handString = "";
-        for(int i = 0; i < getSize(); i++){
+        for (int i = 0; i < getSize(); i++) {
             handString = handString + super.getCard(i).toString();
         }
         return handString;

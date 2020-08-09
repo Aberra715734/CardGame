@@ -11,10 +11,11 @@ package ca.sheridancollege.project;
  *
  * @author Sivagama
  */
-public abstract class Player 
-{
+public abstract class Player {
+
     private String playerID; //the unique ID for this player
     private Hand playerHand = new Hand();//Represents the player's hand
+
     /**
      * A constructor that allows you to set the player's unique ID
      *
@@ -30,19 +31,21 @@ public abstract class Player
      * chooses to hit or stay.
      */
     public abstract boolean hitOrStay();
-    
+
     /**
      * The method that checks if player if busted or not.
+     *
      * @return true if player is busted.
      */
     public abstract boolean checkBust();
-    
+
     /**
      * The method that checks if player got a BlackJack
+     *
      * @return true if it is a BlackJack
      */
     public abstract boolean checkBlackjack();
-    
+
     /**
      * @return the playerID
      */

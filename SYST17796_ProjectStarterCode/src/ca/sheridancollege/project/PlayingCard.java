@@ -28,6 +28,7 @@ public class PlayingCard extends Card {
 
     /**
      * Constructor that allows to set Suit and value of card
+     *
      * @param giveSuit the suit in the deck
      * @param giveValue the value of the suit
      */
@@ -63,8 +64,13 @@ public class PlayingCard extends Card {
         }
         return s;
     }
-    public int getValue(){
+
+    /**
+     * 
+     * @return card value 
+     */
+    public int getValue() {
         return value;
     }
-    
-} 
+
+}

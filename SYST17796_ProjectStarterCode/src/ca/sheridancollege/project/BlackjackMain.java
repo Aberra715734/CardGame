@@ -48,6 +48,8 @@ public class BlackjackMain {
         BlackJack game = new BlackJack();
         BlackjackPlayer newPlayer = new BlackjackPlayer("player");
         game.addPlayer(newPlayer);
+        
+        newPlayer.playerOption();
         game.play();
         
     }

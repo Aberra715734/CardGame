@@ -37,6 +37,11 @@ public abstract class Game {
     public String getGameName() {
         return gameName;
     }
+    
+    public void exitGame(){
+    System.exit(0);
+    }
+    public boolean 
 
     /**
      * Register the player with game.

@@ -23,5 +23,5 @@ public abstract class Card {
      */
     @Override
     public abstract String toString();
-
+    public abstract int getValue();
 }

@@ -63,5 +63,8 @@ public class PlayingCard extends Card {
         }
         return s;
     }
-
-}
+    public int getValue(){
+        return value;
+    }
+    
+} 

@@ -10,43 +10,44 @@ public class BlackJack extends Game {
         super("BlackJack");
     }
     Deck deck = new Deck();
-    BlackjackPlayer dealer = new BlackjackPlayer("Dealer");
-    private Dealer dealerTurn;
-
-    //override play method here
-    @Override
-    public void play()
-    {//for each player
-        for (int i = 0; i < super.getPlayerSize(); i++)
+    Dealer dealer = new Dealer();//creates the dealer
+    @Override public void play()//override play method here
+    { 
+        for(int i = 0; i < super.getPlayerSize(); i++)//for each player
         {
             //preform the following twice
             for (int j = 0; j < 2; j++)
             {
-                //select the player corresponding to i, takes 1 card from the deck and sends to player's hand.
-                super.getPlayers().get(i).getHand().addCard(deck.drawCard());
+                super.getPlayers().get(i).getHand().showCards().add(deck.drawCard());//draws a card, places it in player i's hand
             }
         }
-        //deal 2 cards to dealer
-        for (int j = 0; j < 2; j++)
-        {
-            dealer.getHand().addCard(deck.drawCard());
+        for(int i = 0; i < 2; i++){
+        dealer.getHand().showCards().add(deck.drawCard());//add 2 cards to the dealer's hand
         }
-        //make a while loop to continue iterating until game is finished
-        
-        //Cycle through player turns
-        for (int i = 0; i < super.getPlayerSize(); i++)
+        boolean dealerhits = true;
+        while(dealer.checkBust() != true && dealerhits == true)//checks if dealer has busted
         {
-            if (super.getPlayers().get(i).hitOrStay())//Prompt player for hit or stay action
+            for(int i = 0; i < super.getPlayerSize(); i++)//Cycle through player turns
             {
-                super.getPlayers().get(i).getHand().addCard(deck.drawCard());
-            } else {
-                break;
+                while (super.getPlayers().get(i).checkBust() != true)//checks if player has busted out
+                {
+                    boolean hit = true;//create hit variable, set to true
+                    do 
+                    {
+                        hit = getPlayers().get(i).hitOrStay();//do hitOrStay command until hit is false
+                        if(hit = true){
+                            getPlayers().get(i).getHand().showCards().add(deck.drawCard());
+                        }
+                    }
+                    while(hit == true);//continue loop while hit is true
+                }
             }
-            //Evaluate player hand
+            dealerhits = dealer.hitOrStay();//evaluate while loop condition
+            if(dealerhits == true)
+                dealer.getHand().showCards().add(deck.drawCard());
         }
-        //dealer turn
-        dealerTurn.dealerTurn();
-        //check for winner
+        //Turn order ended, check for winner
+        
     }
 
     @Override

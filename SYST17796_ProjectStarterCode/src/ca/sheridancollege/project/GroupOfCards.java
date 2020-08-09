@@ -67,29 +67,8 @@ public class GroupOfCards {
     public void initialize() {
         cards = new ArrayList<Card>();
     }
-
-    /**
-     *
-     * @param c
-     */
-    public void addCard(Card c) {
-        cards.add(c);
-    }
-
-    /**
-     *
-     * @param i
-     */
-    public void removeCard(int i) {
-        cards.remove(i);
-    }
-
-    /**
-     *
-     * @param i
-     * @return
-     */
-    public Card getCard(int i) {
+    
+    public Card getCard(int i){
         Card c = cards.get(i);
         return c;
     }

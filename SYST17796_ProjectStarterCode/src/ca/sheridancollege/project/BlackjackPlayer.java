@@ -21,10 +21,10 @@ public class BlackjackPlayer extends Player {
     public void play() {
 
     }
-
-    @Override
-    public boolean hitOrStay() {
-        boolean hit = false;
+    
+    public boolean hitOrStay(){
+        super.getHand().toString();
+        boolean hit = true;
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want to hit or stay?");
         String reply = input.next();
@@ -40,28 +40,24 @@ public class BlackjackPlayer extends Player {
         }
         return hit;
     }
-
+    @Override     
     public boolean checkBust() {
-        boolean bust = false;
         if (super.getHand().checkTotal() > 21) {
-//            System.out.println("Player has been busted, he is no longer in this round.");
-            bust = true;
-        }
-        else {
-            bust = false;
-        }
-        return bust;
+            System.out.println("Player Bust");
+            return true;
+        } 
+        else
+            return false;
     }
+    
+    @Override
+    public boolean checkBlackjack(){
+        if (super.getHand().checkTotal() == 21){
+            System.out.println("Blackjack");
+            return true;
+        }
+        else
+           return false;
 
-    public boolean checkBlackjack() {
-        boolean blackjack = false;
-        if (super.getHand().checkTotal() == 21) {
-//            System.out.println("Blackjack");
-             blackjack = true;
-        }
-        else {
-            blackjack = false;
-        }
-        return blackjack;
     }
 }

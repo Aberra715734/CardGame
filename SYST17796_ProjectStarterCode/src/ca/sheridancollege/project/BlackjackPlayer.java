@@ -56,21 +56,8 @@ public class BlackjackPlayer extends Player {
             System.out.println("Blackjack");
             return true;
         }
-        else {
-            bust = false;
-        }
-        return bust;
-    }
+        else
+           return false;
 
-    public boolean checkBlackjack() {
-        boolean blackjack = false;
-        if (super.getHand().checkTotal() == 21) {
-//            System.out.println("Blackjack");
-             blackjack = true;
-        }
-        else {
-            blackjack = false;
-        }
-        return blackjack;
     }
 }

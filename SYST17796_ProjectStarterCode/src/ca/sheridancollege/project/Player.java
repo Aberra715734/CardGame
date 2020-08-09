@@ -30,8 +30,19 @@ public abstract class Player
      * chooses to hit or stay.
      */
     public abstract boolean hitOrStay();
+    
+    /**
+     * The method that checks if player if busted or not.
+     * @return true if player is busted.
+     */
     public abstract boolean checkBust();
+    
+    /**
+     * The method that checks if player got a BlackJack
+     * @return true if it is a BlackJack
+     */
     public abstract boolean checkBlackjack();
+    
     /**
      * @return the playerID
      */

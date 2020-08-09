@@ -53,7 +53,12 @@ public class BlackJackMain {
 =======
         BlackjackPlayer newPlayer = new BlackjackPlayer("player");
         game.addPlayer(newPlayer);
+<<<<<<< HEAD
 >>>>>>> 91ddc337e10d8e1574faa52ed1474ba7d9c192a2
+=======
+        
+        newPlayer.playerOption();
+>>>>>>> cardgame/master
         game.play();
         
     }

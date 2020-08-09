@@ -34,11 +34,16 @@ public class BlackJack extends Game{
                     do 
                     {
                         hit = getPlayers().get(i).hitOrStay();//do hitOrStay command until hit is false
+                        if(hit = true){
+                            getPlayers().get(i).getHand().showCards().add(deck.drawCard());
+                        }
                     }
                     while(hit == true);//continue loop while hit is true
                 }
             }
             dealerhits = dealer.hitOrStay();//evaluate while loop condition
+            if(dealerhits == true)
+                dealer.getHand().showCards().add(deck.drawCard());
         }
         //Turn order ended, check for winner
         

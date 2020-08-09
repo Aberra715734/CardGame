@@ -45,7 +45,6 @@ public class BlackjackPlayer extends Player {
     @Override     
     public boolean checkBust() {
         if (super.getHand().checkTotal() > 21) {
-            System.out.println("Player Bust");
             return true;
         } 
         else

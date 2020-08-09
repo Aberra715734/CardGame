@@ -41,7 +41,6 @@ public abstract class Game {
     public void exitGame(){
     System.exit(0);
     }
-    public boolean 
 
     /**
      * Register the player with game.

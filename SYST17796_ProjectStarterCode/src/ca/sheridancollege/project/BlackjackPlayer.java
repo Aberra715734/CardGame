@@ -21,7 +21,7 @@ public class BlackjackPlayer extends Player {
     public void play() {
 
     }
-        public void playerOption(){
+/*        public void playerOption(){
       Scanner input = new Scanner(System.in);
  
   boolean start = true;
@@ -177,7 +177,7 @@ public class BlackjackPlayer extends Player {
     }while(number<2&&number>4);
     }
     
-    
+  */  
     public boolean hitOrStay(){
         super.getHand().toString();
         boolean hit = true;

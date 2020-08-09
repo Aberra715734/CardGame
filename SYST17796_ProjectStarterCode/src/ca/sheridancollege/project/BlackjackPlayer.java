@@ -24,6 +24,7 @@ public class BlackjackPlayer extends Player{
     }
     
     public boolean hitOrStay(){
+        super.getHand().toString();
         boolean hit = false;
         Scanner input = new Scanner(System.in);
         System.out.println("Do you want to hit or stay?");

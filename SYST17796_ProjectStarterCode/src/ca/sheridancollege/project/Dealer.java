@@ -9,10 +9,33 @@ package ca.sheridancollege.project;
  *
  * @author jasleen
  */
-public class Dealer {
-    
+public class Dealer extends Player {
+   public Dealer(){
+       super("Dealer");
+   }
+   @Override public void play(){}
+   @Override public boolean checkBlackjack(){
+       if(getHand().checkTotal() == 21)
+           return true;
+       else 
+           return false;
+   }
+   @Override public boolean checkBust(){
+       if(getHand().checkTotal() > 21)
+           return true;
+       else 
+           return false;
+   }
+   @Override public boolean hitOrStay(){
+       if(getHand().checkTotal() <= 17)
+       {
+           return true; //dealer hits
+       }
+       else//total is 17 or above
+           return false;//dealer stays
+   }
+    /*
     private Hand hand = new Hand();
-    private Deck deck;
     public boolean checkValue(){
        if (hand.checkTotal() == 21){
            return true;
@@ -31,5 +54,6 @@ public class Dealer {
         }
         
     }
+*/
 }
 

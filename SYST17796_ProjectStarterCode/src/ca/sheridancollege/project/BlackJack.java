@@ -8,6 +8,8 @@ package ca.sheridancollege.project;
 public class BlackJack extends Game{
     public BlackJack(){
         super("BlackJack");
+        Dealer dealer = new Dealer();//creates the dealer
+        super.getPlayers().add(dealer);//adds the dealer to the player list
     }
     Deck deck = new Deck();
     @Override public void play()//override play method here
@@ -16,8 +18,7 @@ public class BlackJack extends Game{
         {
             for(int j = 0; j < 2; j++)//preform the following twice
             {
-                Card c = deck.drawCard();
-                super.getPlayers().get(i).getHand().showCards().add(c);
+                super.getPlayers().get(i).getHand().showCards().add(deck.drawCard());//draws a card, places it in player i's hand
             }
         }
 

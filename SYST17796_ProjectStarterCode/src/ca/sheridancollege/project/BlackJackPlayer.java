@@ -30,20 +30,6 @@ public class BlackJackPlayer extends Player {
 
         boolean start = true;
         BlackJackPlayer apit = new BlackJackPlayer("");
-        BlackJack f = new BlackJack();
-
-        System.out.println("Do you want to play 'Single' or 'Multiplayer?'?");
-        String copy = input.next();
-        if (copy.equalsIgnoreCase("single")) {
-            apit.Single();
-            start = false;
-        } else if (copy.equalsIgnoreCase("multiplayer")) {
-            apit.Multiplayer();
-            start = false;
-        } else {
-            System.out.println("Please either choose single or multiplayer");
-        }
-
     }
 
     /**

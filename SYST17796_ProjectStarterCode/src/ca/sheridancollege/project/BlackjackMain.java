@@ -51,6 +51,7 @@ public class BlackJackMain {
         game.addPlayer(testPlayer);
 
         testPlayer.playerOption();
+        
         game.play();
 
     }

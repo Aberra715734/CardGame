@@ -8,10 +8,9 @@ package ca.sheridancollege.project;
 public class BlackJack extends Game{
     public BlackJack(){
         super("BlackJack");
-        Dealer dealer = new Dealer();//creates the dealer
-        super.getPlayers().add(dealer);//adds the dealer to the player list
     }
     Deck deck = new Deck();
+    Dealer dealer = new Dealer();//creates the dealer
     @Override public void play()//override play method here
     { 
         for(int i = 0; i < super.getPlayerSize(); i++)//for each player
@@ -21,15 +20,27 @@ public class BlackJack extends Game{
                 super.getPlayers().get(i).getHand().showCards().add(deck.drawCard());//draws a card, places it in player i's hand
             }
         }
-
-        //make a while loop to continue iterating until game is finished
-        for(int i = 0; i < super.getPlayerSize(); i++)//Cycle through player turns
-        {
-           
-            
+        for(int i = 0; i < 2; i++){
+        dealer.getHand().showCards().add(deck.drawCard());//add 2 cards to the dealer's hand
         }
-        //dealer turn
-        //check for winner
+        boolean dealerhits = true;
+        while(dealer.checkBust() != true && dealerhits == true)//checks if dealer has busted
+        {
+            for(int i = 0; i < super.getPlayerSize(); i++)//Cycle through player turns
+            {
+                while (super.getPlayers().get(i).checkBust() != true)//checks if player has busted out
+                {
+                    boolean hit = true;//create hit variable, set to true
+                    do 
+                    {
+                        hit = getPlayers().get(i).hitOrStay();//do hitOrStay command until hit is false
+                    }
+                    while(hit == true);//continue loop while hit is true
+                }
+            }
+            dealerhits = dealer.hitOrStay();//evaluate while loop condition
+        }
+        //Turn order ended, check for winner
         
     }
     @Override public void declareWinner()//override declareWinner method here

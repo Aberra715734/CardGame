@@ -218,5 +218,10 @@ boolean valid = false;
     
     }while(number<2&&number>4);
     }
+    
+    public void Score (){
+    
+    
+    }
 
 }
